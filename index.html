@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue practice</title>
+</head>
+<body>
+    <div id="app">
+
+      <input type="text" v-model="nuevafruta" placeholder="Nueva fruta">
+      <input type="text" v-model="nuevaCantidad" placeholder="Cantidad">
+      <button v-on:click="agregarFruta">AGREGAR</button>
+
+
+<h1>{{titulo}}</h1>
+
+<ul>
+    <li v-for="fruta of frutas">{{fruta.nombre}} - {{fruta.cantidad}} 
+        <span v-if="fruta.cantidad === 0" style="color:red"> -SIN STOCK</span></li>
+</ul>
+
+
+
+<div v-for="fruta of frutas" style="background-color:thistle;padding-bottom: 10px ;">
+<span>{{fruta.nombre}}</span>
+<br>
+<span style="color:royalblue">{{fruta.cantidad}}</span>
+</div>
+    </div>
+
+
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
